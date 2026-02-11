@@ -111,6 +111,7 @@ DATA2 = [
             "Clause 28.11: Coles Based Approach",
             "Set-off: Annual",
             "557C condition on all shifts",
+            "Lower Estimate",
         ],
     },
     {
@@ -345,3 +346,4 @@ render_section(
     header_title="Coles' Class Action : whole class sensitivity analysis",
     header_sub="Methodology Comparison",
 )
+
