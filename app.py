@@ -79,10 +79,10 @@ DATA2 = [
         ],
     },
     {
-        "category": "28.11 Judgement - Pay period - 557C on selected shifts",
+        "category": "28.11 Judgement - Pay period - 557C on non-clocked shifts",
         "value": 690773333.38,
         "color": "#06b6d4",
-        "title": "28.11 Judgement - Pay period - 557C on selected shifts",
+        "title": "28.11 Judgement - Pay period - 557C on non-clocked shifts",
         "features": [
             "Clause 28.11: Judgement Based Approach",
             "Set-off: Pay period",
@@ -103,10 +103,10 @@ DATA2 = [
         ],
     },
     {
-        "category": "28.11 Coles - Annual - 557C all shifts - After FWO",
+        "category": "28.11 Coles - Annual - 557C on all shifts - After FWO",
         "value": 37575310.68,
         "color": "#f59e0b",
-        "title": "28.11 Coles - Annual - 557C all shifts - After FWO",
+        "title": "28.11 Coles - Annual - 557C on all shifts - After FWO",
         "features": [
             "Clause 28.11: Coles Based Approach",
             "Set-off: Annual",
@@ -346,4 +346,5 @@ render_section(
     header_title="Coles' Class Action : whole class sensitivity analysis",
     header_sub="Methodology Comparison",
 )
+
 
