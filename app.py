@@ -144,7 +144,7 @@ def render_section(
     if notes:
         notes_html = "".join(
         [
-        f"<div style='margin:6px 0; color: rgba(226,232,240,0.80); font-size:0.95rem;'>• {n}</div>"
+        f"<div style='margin:6px 0; color: rgba(226,232,240,0.80); font-size:1.2rem;'> {n}</div>"
         for n in notes
         ]
     )
@@ -182,7 +182,7 @@ def render_section(
             text=f"<b><span style='color:{d['color']}'>{format_short(d['value'])}</span></b>",
             showarrow=False,
             align="center",
-            font=dict(size=12, color=d["color"]),
+            font=dict(size=18, color=d["color"]),
             bgcolor="rgba(255,255,255,0.95)",
             bordercolor="rgba(255,255,255,0.65)",
             borderwidth=1,
@@ -348,6 +348,7 @@ render_section(
         "The budget for the Woolworths class action, excluding the penalties hearing, is $8,367,690.",
     ],
 )
+
 
 
 
