@@ -144,7 +144,7 @@ def render_section(
     if notes:
         notes_html = "".join(
             [
-                f"<div style='margin:6px 0; color: rgba(226,232,240,0.80); font-size:0.95rem;'>• {n}</div>"
+                f"<div style='margin:6px 0; color: rgba(226,232,240,0.80); font-size:1.2rem;'>• {n}</div>"
                 for n in notes
             ]
         )
@@ -347,6 +347,7 @@ render_section(
         "The budget for the Woolworths class action, excluding the penalties hearing, is $8,367,690.",
     ],
 )
+
 
 
 
