@@ -8,8 +8,9 @@ DATA = [
         "color": "#10b981",
         "title": "Scenario A",
         "features": [
-            "Clause 28.11: Judgement-Based Approach",
-            "Set-off: Pay Period"
+            "Clause 28.11 Approach: Judgement-Based Approach",
+            "Losses overlapping with FWO claim: Not Deducted",
+            "Set-Off Approach: Pay Period"
         ],
     },
     {
@@ -18,19 +19,20 @@ DATA = [
         "color": "#06b6d4",
         "title": "Scenario B",
         "features": [
-            "Clause 28.11: Judgement-Based Approach",
-            "Set-off: Bi-Annual"
+            "Clause 28.11 Approach: Judgement-Based Approach",
+            "Losses overlapping with FWO claim: Not Deducted",
+            "Set-Off Approach: Bi-Annual"
         ],
     },
     {
-        "category": "28.11 Judgement\nmethodology - With\nFWO - Pay Period",
-        "value": 326116709.40,
+        "category": "28.11 Judgement\nmethodology - With\nFWO - Bi Annual",
+        "value":  213397928.90,
         "color": "#f59e0b",
         "title": "Scenario C",
         "features": [
-            "Clause 28.11: Judgement-Based Approach",
-            "Losses overlapping with FWO claim",
-            "Set-off: Pay Period"
+            "Clause 28.11 Approach: Judgement-Based Approach",
+            "Losses overlapping with FWO claim: Deducted",
+            "Set-Off Approach: Bi-Annual"
         ],
     },
     {
@@ -39,9 +41,9 @@ DATA = [
         "color": "#8b5cf6",
         "title": "Scenario D",
         "features": [
-            "Clause 28.11: Coles Based Approach",
-            "Losses overlapping with FWO claim",
-            "Set-off: Bi-Annual"
+            "Clause 28.11 Approach: Coles Based Approach",
+            "Losses overlapping with FWO claim: Deducted",
+            "Set-Off Approach: Bi-Annual"
         ],
     },
 ]
@@ -54,8 +56,8 @@ DATA2 = [
         "color": "#06b6d4",
         "title": "Scenario A",
         "features": [
-            "Clause 28.11: Judgement-Based Approach",
-            "Set-off: Pay period",
+            "Clause 28.11 Approach: Judgement-Based Approach",
+            "Set-Off Approach: Pay period",
             "557C condition on non-clocked shifts"
             
         ],
@@ -66,8 +68,8 @@ DATA2 = [
         "color": "#3b82f6",
         "title": "Scenario B",
         "features": [
-            "Clause 28.11: Judgement-Based Approach",
-            "Set-off: Pay period",
+            "Clause 28.11 Approach: Judgement-Based Approach",
+            "Set-Off Approach: Pay period",
             "557C condition on non-clocked shifts"
             
         ],
@@ -78,8 +80,8 @@ DATA2 = [
         "color": "#f59e0b",
         "title": "Scenario C",
         "features": [
-            "Clause 28.11: Judgement-Based Approach",
-            "Set-off: Annual",
+            "Clause 28.11 Approach: Judgement-Based Approach",
+            "Set-Off Approach: Annual",
             "557C condition on non-clocked shifts"
         ],
     },
@@ -89,8 +91,8 @@ DATA2 = [
         "color": "#8b5cf6",
         "title": "Scenario D",
         "features": [
-            "Clause 28.11: Coles Based Approach",
-            "Set-off: Annual",
+            "Clause 28.11 Approach Coles Based Approach",
+            "Set-Off Approach: Annual",
             "557C condition on non-clocked shifts"
         ],
     },
@@ -307,13 +309,22 @@ render_section(
     DATA,
     header_title="Woolworths Class Action : whole class sensitivity analysis",
     header_sub="Methodology Comparison",
+    notes=[
+        "These figures include group member losses and interest, but do not include an amount for penalties. The amount of penalties is subject to counsel advice, which is currently in progress.",
+        "The budget for the Coles class action, excluding the penalties hearing, is $5,810,631."
+    ]
 )
 
 render_section(
     DATA2,
-    header_title="Coles' Class Action : whole class sensitivity analysis",
+    header_title="Coles' Class Action : Whole Class Sensitivity Analysis",
     header_sub="Methodology Comparison",
+    notes=[
+        "These figures include group member losses and interest, but do not include an amount for penalties. The amount of penalties is subject to counsel advice, which is currently in progress.",
+        "The budget for the Woolworths class action, excluding the penalties hearing, is $8,367,690."
+    ]
 )
+
 
 
 
