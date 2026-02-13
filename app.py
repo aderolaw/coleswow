@@ -142,12 +142,25 @@ def render_section(
 
     # ---------- Notes (NEW) ----------
     if notes:
-        notes_html = "".join(
-            [
-                f"<div style='margin:6px 0; color: rgba(226,232,240,0.80); font-size:1.2rem;'>• {n}</div>"
-                for n in notes
-            ]
-        )
+    notes_html = "".join(
+        [
+            f"""
+            <div style='
+                margin:10px 0;
+                font-size:1.15rem;
+                font-weight:500;
+                color:rgba(226,232,240,0.90);
+                text-align:center;
+                max-width:1000px;
+                margin-left:auto;
+                margin-right:auto;
+            '>
+                {n}
+            </div>
+            """
+            for n in notes
+        ]
+    )
         st.markdown(
             f"<div style='text-align:center; margin:-0.5rem 0 1.2rem 0;'>{notes_html}</div>",
             unsafe_allow_html=True,
@@ -311,7 +324,7 @@ st.markdown(
 .card-title { font-weight: 800; color: #0f172a; font-size: 0.80rem; line-height: 1.2; }
 .card-li { display: flex; gap: 8px; align-items: flex-start; margin-bottom: 8px; }
 .dot { font-size: 0.85rem; line-height: 1; margin-top: 1px; }
-.li-text { font-size: 0.76rem; color: rgba(15,23,42,0.75); line-height: 1.25; }
+.li-text { font-size: 0.95rem; color: font-weight: 500; rgba(15,23,42,0.75); line-height: 1.4; }
 .card-ft {
   border-top: 1px solid rgba(15,23,42,0.12);
   margin-top: 10px; padding-top: 10px;
@@ -347,6 +360,7 @@ render_section(
         "The budget for the Woolworths class action, excluding the penalties hearing, is $8,367,690.",
     ],
 )
+
 
 
 
