@@ -6,60 +6,42 @@ DATA = [
         "category": "28.11 Judgement\nmethodology - Without\nFWO - Pay Period",
         "value": 1668147026.75,
         "color": "#10b981",
-        "title": "28.11 Judgement\nmethodology - Without\nFWO - Pay Period",
+        "title": "Scenario A",
         "features": [
-            "Clause 28.11: Judgement Based Approach",
-            "FWO Cut Status: Without FWO",
-            "Set-off: Pay Period",
-            "Best on Judgement",
+            "Clause 28.11: Judgement-Based Approach",
+            "Set-off: Pay Period"
         ],
     },
     {
         "category": "28.11 Judgement\nmethodology - Without\nFWO - Bi Annual",
         "value": 1371946816.29,
         "color": "#06b6d4",
-        "title": "28.11 Judgement\nmethodology - Without\nFWO - Bi Annual",
+        "title": "Scenario B",
         "features": [
-            "Clause 28.11: Judgement Based Approach",
-            "FWO Cut Status: Without FWO",
-            "Set-off: Bi Annual",
-            "Second Best on Judgement",
-        ],
-    },
-    {
-        "category": "28.11 Coles\nmethodology - Without\nFWO - Bi Annual",
-        "value": 409657215.48,
-        "color": "#3b82f6",
-        "title": "28.11 Coles\nmethodology - Without\nFWO - Bi Annual",
-        "features": [
-            "Clause 28.11: Coles Based Approach",
-            "FWO Cut Status: Without FWO",
-            "Set-off: Bi Annual",
-            "Realistic Worst",
+            "Clause 28.11: Judgement-Based Approach",
+            "Set-off: Bi-Annual"
         ],
     },
     {
         "category": "28.11 Judgement\nmethodology - With\nFWO - Pay Period",
         "value": 326116709.40,
         "color": "#f59e0b",
-        "title": "28.11 Judgement\nmethodology - With\nFWO - Pay Period",
+        "title": "Scenario C",
         "features": [
-            "Clause 28.11: Judgement Based Approach",
-            "FWO Cut Status: With FWO Applied",
-            "Set-off: Pay Period",
-            "Likely Best",
+            "Clause 28.11: Judgement-Based Approach",
+            "Losses overlapping with FWO claim",
+            "Set-off: Pay Period"
         ],
     },
     {
         "category": "28.11 Coles\nmethodology - With\nFWO - Bi Annual",
         "value": 56690258.85,
         "color": "#8b5cf6",
-        "title": "28.11 Coles\nmethodology - With\nFWO - Bi Annual",
+        "title": "Scenario D",
         "features": [
             "Clause 28.11: Coles Based Approach",
-            "FWO Status: With FWO Applied",
-            "Set-off: Bi Annual",
-            "Bare Minimum",
+            "Losses overlapping with FWO claim",
+            "Set-off: Bi-Annual"
         ],
     },
 ]
@@ -67,63 +49,49 @@ DATA = [
 
 DATA2 = [
     {
-        "category": "28.11 Judgement - Pay period - 557C on all shifts",
-        "value": 780652186.32,
-        "color": "#10b981",
-        "title": "28.11 Judgement - Pay period - 557C on all shifts",
-        "features": [
-            "Clause 28.11: Judgement Based Approach",
-            "Set-off: Pay period",
-            "557C condition on all shifts",
-            "Highest estimate",
-        ],
-    },
-    {
         "category": "28.11 Judgement - Pay period - 557C on non-clocked shifts",
         "value": 690773333.38,
         "color": "#06b6d4",
-        "title": "28.11 Judgement - Pay period - 557C on non-clocked shifts",
+        "title": "Scenario A",
         "features": [
-            "Clause 28.11: Judgement Based Approach",
+            "Clause 28.11: Judgement-Based Approach",
             "Set-off: Pay period",
-            "557C condition on non-clocked shifts",
-            "Best on Judgement",
+            "557C condition on non-clocked shifts"
+            
         ],
     },
     {
         "category": "28.11 Judgement - Pay period - 557C non-clocked - After FWO",
         "value": 282887638.08,
         "color": "#3b82f6",
-        "title": "28.11 Judgement - Pay period - 557C non-clocked - After FWO",
+        "title": "Scenario B",
         "features": [
-            "Clause 28.11: Judgement Based Approach",
+            "Clause 28.11: Judgement-Based Approach",
             "Set-off: Pay period",
-            "557C condition on non-clocked shifts",
-            "Likely Best",
+            "557C condition on non-clocked shifts"
+            
         ],
     },
     {
         "category": "28.11 Coles - Annual - 557C on all shifts - After FWO",
-        "value": 37575310.68,
+        "value": 214695100.81,
         "color": "#f59e0b",
-        "title": "28.11 Coles - Annual - 557C on all shifts - After FWO",
+        "title": "Scenario C",
         "features": [
-            "Clause 28.11: Coles Based Approach",
+            "Clause 28.11: Judgement-Based Approach",
             "Set-off: Annual",
-            "557C condition on all shifts",
-            "Lower Estimate",
+            "557C condition on non-clocked shifts"
         ],
     },
     {
         "category": "28.11 Coles - Annual - 557C non-clocked - After FWO",
         "value": 26617692.75,
         "color": "#8b5cf6",
-        "title": "28.11 Coles - Annual - 557C non-clocked - After FWO",
+        "title": "Scenario D",
         "features": [
             "Clause 28.11: Coles Based Approach",
             "Set-off: Annual",
-            "557C condition on non-clocked shifts",
-            "Likely Worst",
+            "557C condition on non-clocked shifts"
         ],
     },
 ]
@@ -346,5 +314,6 @@ render_section(
     header_title="Coles' Class Action : whole class sensitivity analysis",
     header_sub="Methodology Comparison",
 )
+
 
 
