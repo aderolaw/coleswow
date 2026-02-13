@@ -266,7 +266,7 @@ st.markdown(
               linear-gradient(135deg, #0b1220 0%, #0f172a 45%, #0b1220 100%);
   color: #e5e7eb;
 }
-.block-container { padding-top: 2.0rem; padding-bottom: 2.5rem; }
+.block-container { padding-top: 4.5rem; padding-bottom: 2.5rem; }
 
 .hdr-wrap { text-align: center; margin-bottom: 1.5rem; }
 .hdr-row  { display: inline-flex; align-items: center; gap: 14px; }
@@ -347,6 +347,7 @@ render_section(
         "The budget for the Woolworths class action, excluding the penalties hearing, is $8,367,690.",
     ],
 )
+
 
 
 
