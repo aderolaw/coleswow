@@ -142,25 +142,25 @@ def render_section(
 
     # ---------- Notes (NEW) ----------
     if notes:
-    notes_html = "".join(
-        [
-            f"""
-            <div style='
-                margin:10px 0;
-                font-size:1.15rem;
-                font-weight:500;
-                color:rgba(226,232,240,0.90);
-                text-align:center;
-                max-width:1000px;
-                margin-left:auto;
-                margin-right:auto;
-            '>
-                {n}
-            </div>
-            """
-            for n in notes
-        ]
-    )
+        notes_html = "".join(
+            [
+                f"""
+                <div style='
+                    margin:10px 0;
+                    font-size:1.15rem;
+                    font-weight:500;
+                    color:rgba(226,232,240,0.90);
+                    text-align:center;
+                    max-width:1000px;
+                    margin-left:auto;
+                    margin-right:auto;
+                '>
+                    {n}
+                </div>
+                """
+                for n in notes
+            ]
+        )
         st.markdown(
             f"<div style='text-align:center; margin:-0.5rem 0 1.2rem 0;'>{notes_html}</div>",
             unsafe_allow_html=True,
@@ -360,6 +360,7 @@ render_section(
         "The budget for the Woolworths class action, excluding the penalties hearing, is $8,367,690.",
     ],
 )
+
 
 
 
