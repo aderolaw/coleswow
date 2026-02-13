@@ -58,6 +58,7 @@ DATA2 = [
             "Clause 28.11 Approach: Judgement-Based Approach",
             "Set-Off Approach: Pay period",
             "557C condition on non-clocked shifts",
+            "Losses overlapping with FWO claim: Not Deducted",
         ],
     },
     {
@@ -69,7 +70,7 @@ DATA2 = [
             "Clause 28.11 Approach: Judgement-Based Approach",
             "Set-Off Approach: Pay period",
             "557C condition on non-clocked shifts",
-            "FWO overlap deducted",
+            "Losses overlapping with FWO claim: Deducted",
         ],
     },
     {
@@ -81,7 +82,7 @@ DATA2 = [
             "Clause 28.11 Approach: Coles Based Approach",
             "Set-Off Approach: Annual",
             "557C condition on all shifts",
-            "FWO overlap deducted",
+            "Losses overlapping with FWO claim: Deducted",
         ],
     },
     {
@@ -93,7 +94,7 @@ DATA2 = [
             "Clause 28.11 Approach: Coles Based Approach",
             "Set-Off Approach: Annual",
             "557C condition on non-clocked shifts",
-            "FWO overlap deducted",
+            "Losses overlapping with FWO claim: Deducted",
         ],
     },
 ]
@@ -348,6 +349,7 @@ render_section(
         "The budget for the Coles class action, excluding the penalties hearing, is $5,810,631.",
     ],
 )
+
 
 
 
