@@ -330,7 +330,18 @@ st.markdown(
 render_section(
     DATA,
     header_title="Woolworths Class Action: Whole Class Sensitivity Analysis",
-    header_sub="Methodology Comparison",
+    header_sub=" Methodology Comparison",
+    panel_title="Comparative Analysis",
+    notes=[
+        "These figures include group member losses and interest, but do not include an amount for penalties. The amount of penalties is subject to counsel advice, which is currently in progress.",
+        "The budget for the Woolworths class action, excluding the penalties hearing, is $8,367,690.",
+    ],
+)
+
+render_section(
+    DATA2,
+    header_title="Coles Class Action: Whole Class Sensitivity Analysis",
+    header_sub=" Methodology Comparison",
     panel_title="Comparative Analysis",
     notes=[
         "These figures include group member losses and interest, but do not include an amount for penalties. The amount of penalties is subject to counsel advice, which is currently in progress.",
@@ -338,16 +349,6 @@ render_section(
     ],
 )
 
-render_section(
-    DATA2,
-    header_title="Coles Class Action: Whole Class Sensitivity Analysis",
-    header_sub="Methodology Comparison",
-    panel_title="Comparative Analysis",
-    notes=[
-        "These figures include group member losses and interest, but do not include an amount for penalties. The amount of penalties is subject to counsel advice, which is currently in progress.",
-        "The budget for the Woolworths class action, excluding the penalties hearing, is $8,367,690.",
-    ],
-)
 
 
 
