@@ -10,7 +10,7 @@ DATA = [
         "features": [
             "Clause 28.11 Approach: Judgement-Based Approach",
             "Losses overlapping with FWO claim: Not Deducted",
-            "Set-Off Approach: Pay Period"
+            "Set-Off Approach: Pay Period",
         ],
     },
     {
@@ -21,18 +21,18 @@ DATA = [
         "features": [
             "Clause 28.11 Approach: Judgement-Based Approach",
             "Losses overlapping with FWO claim: Not Deducted",
-            "Set-Off Approach: Bi-Annual"
+            "Set-Off Approach: Bi-Annual",
         ],
     },
     {
         "category": "28.11 Judgement\nmethodology - With\nFWO - Bi Annual",
-        "value":  213397928.90,
+        "value": 213397928.90,
         "color": "#f59e0b",
         "title": "Scenario C",
         "features": [
             "Clause 28.11 Approach: Judgement-Based Approach",
             "Losses overlapping with FWO claim: Deducted",
-            "Set-Off Approach: Bi-Annual"
+            "Set-Off Approach: Bi-Annual",
         ],
     },
     {
@@ -43,11 +43,10 @@ DATA = [
         "features": [
             "Clause 28.11 Approach: Coles Based Approach",
             "Losses overlapping with FWO claim: Deducted",
-            "Set-Off Approach: Bi-Annual"
+            "Set-Off Approach: Bi-Annual",
         ],
     },
 ]
-
 
 DATA2 = [
     {
@@ -58,8 +57,7 @@ DATA2 = [
         "features": [
             "Clause 28.11 Approach: Judgement-Based Approach",
             "Set-Off Approach: Pay period",
-            "557C condition on non-clocked shifts"
-            
+            "557C condition on non-clocked shifts",
         ],
     },
     {
@@ -70,8 +68,8 @@ DATA2 = [
         "features": [
             "Clause 28.11 Approach: Judgement-Based Approach",
             "Set-Off Approach: Pay period",
-            "557C condition on non-clocked shifts"
-            
+            "557C condition on non-clocked shifts",
+            "FWO overlap deducted",
         ],
     },
     {
@@ -80,9 +78,10 @@ DATA2 = [
         "color": "#f59e0b",
         "title": "Scenario C",
         "features": [
-            "Clause 28.11 Approach: Judgement-Based Approach",
+            "Clause 28.11 Approach: Coles Based Approach",
             "Set-Off Approach: Annual",
-            "557C condition on non-clocked shifts"
+            "557C condition on all shifts",
+            "FWO overlap deducted",
         ],
     },
     {
@@ -91,9 +90,10 @@ DATA2 = [
         "color": "#8b5cf6",
         "title": "Scenario D",
         "features": [
-            "Clause 28.11 Approach Coles Based Approach",
+            "Clause 28.11 Approach: Coles Based Approach",
             "Set-Off Approach: Annual",
-            "557C condition on non-clocked shifts"
+            "557C condition on non-clocked shifts",
+            "FWO overlap deducted",
         ],
     },
 ]
@@ -104,6 +104,7 @@ DATA2 = [
 def format_currency(value: float) -> str:
     return f"A${value:,.2f}"
 
+
 def format_short(value: float) -> str:
     if value >= 1_000_000_000:
         return f"${value/1_000_000_000:.2f}B"
@@ -111,7 +112,14 @@ def format_short(value: float) -> str:
         return f"${value/1_000_000:.2f}M"
     return format_currency(value)
 
-def render_section(data, header_title: str, header_sub: str, panel_title: str = "Comparative Analysis"):
+
+def render_section(
+    data,
+    header_title: str,
+    header_sub: str,
+    panel_title: str = "Comparative Analysis",
+    notes=None,  # <-- FIX: now accepts notes
+):
     # ---------- Header ----------
     st.markdown(
         f"""
@@ -131,6 +139,19 @@ def render_section(data, header_title: str, header_sub: str, panel_title: str = 
         """,
         unsafe_allow_html=True,
     )
+
+    # ---------- Notes (NEW) ----------
+    if notes:
+        notes_html = "".join(
+            [
+                f"<div style='margin:6px 0; color: rgba(226,232,240,0.80); font-size:0.95rem;'>• {n}</div>"
+                for n in notes
+            ]
+        )
+        st.markdown(
+            f"<div style='text-align:center; margin:-0.5rem 0 1.2rem 0;'>{notes_html}</div>",
+            unsafe_allow_html=True,
+        )
 
     # ---------- Main panel ----------
     st.markdown('<div class="panel">', unsafe_allow_html=True)
@@ -232,9 +253,9 @@ def render_section(data, header_title: str, header_sub: str, panel_title: str = 
 
 
 # =========================
-# Page config + CSS (keep same look)
+# Page config + CSS
 # =========================
-st.set_page_config(page_title="WOW Sensitivity Analysis", layout="wide")
+st.set_page_config(page_title="Sensitivity Analysis", layout="wide")
 
 st.markdown(
     """
@@ -303,28 +324,29 @@ st.markdown(
 )
 
 # =========================
-# Render BOTH sections (one after another)
+# Render BOTH sections
 # =========================
 render_section(
     DATA,
-    header_title="Woolworths Class Action : whole class sensitivity analysis",
+    header_title="Woolworths Class Action: Whole Class Sensitivity Analysis",
     header_sub="Methodology Comparison",
+    panel_title="Comparative Analysis",
     notes=[
         "These figures include group member losses and interest, but do not include an amount for penalties. The amount of penalties is subject to counsel advice, which is currently in progress.",
-        "The budget for the Coles class action, excluding the penalties hearing, is $5,810,631."
-    ]
+        "The budget for the Coles class action, excluding the penalties hearing, is $5,810,631.",
+    ],
 )
 
 render_section(
     DATA2,
-    header_title="Coles' Class Action : Whole Class Sensitivity Analysis",
+    header_title="Coles Class Action: Whole Class Sensitivity Analysis",
     header_sub="Methodology Comparison",
+    panel_title="Comparative Analysis",
     notes=[
         "These figures include group member losses and interest, but do not include an amount for penalties. The amount of penalties is subject to counsel advice, which is currently in progress.",
-        "The budget for the Woolworths class action, excluding the penalties hearing, is $8,367,690."
-    ]
+        "The budget for the Woolworths class action, excluding the penalties hearing, is $8,367,690.",
+    ],
 )
-
 
 
 
